@@ -1,1 +1,1 @@
-# Pr-ctica1-EstructuraDeComputadores-UC3M
+# Práctica1-EstructuraDeComputadores-UC3M

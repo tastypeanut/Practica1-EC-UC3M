@@ -1,6 +1,0 @@
-
-.text
-.globl main
-  main:
-  li $t0, 1 #this is a test
-  li $t1, 1 #this is a test

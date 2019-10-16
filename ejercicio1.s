@@ -22,5 +22,5 @@
                 li $v0, 0
                 jr $ra
             fin1:
-                li $v0, 1
+                li $v0, -1
                 jr $ra

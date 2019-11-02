@@ -15,7 +15,7 @@
                   while:
                         blt $t3, $t0, fin0 #Bucle while, mientras que $t3 sea mayor que la direccion de inicio de la matriz se ejecuta el while
                         sw $zero, ($t3) #Carga 0 en esa posicion
-                        addi $t3, $t3, -4 #Retrocede una poscion (4bytes) en memoria 
+                        addi $t3, $t3, -4 #Retrocede una posicion (4bytes) en memoria 
                         b while #Vuelve al inicio del bucle
 
                   #Lo siguiente cambia el valor de v0 a 0 o 1 dependiendo de la funcion y finaliza la funcion con jr $ra

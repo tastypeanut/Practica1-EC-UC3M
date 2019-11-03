@@ -1,5 +1,5 @@
 # Práctica1-EstructuraDeComputadores-UC3M
-Esto es el repositorio para la Práctica 1 de la asignatura de EC (Estructuras de Computadores), de la Universidad Carlos III de Madrid.
+Esto es el repositorio para la Práctica 1 de la asignatura de EC (Estructura de Computadores), de la Universidad Carlos III de Madrid.
 
 ## Autores
 

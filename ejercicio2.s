@@ -8,7 +8,7 @@
                 li $t2, 0x007FFFFF #Mascara mantisa
                 
                 #Calculamos el tamaño de la matriz
-                #Primero multiplicamos la dimensiones, le restamo uno para que vaya de 0 a n-1
+                #Primero multiplicamos la dimensiones, le restamos uno para que vaya de 0 a n-1
                 mul $t3, $a1, $a2
                 addi $t3, $t3, -1
                 mul $t3, $t3, 4

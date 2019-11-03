@@ -14,7 +14,7 @@
                 mul $t3, $t3, 4
                 add $t3, $t3, $a0
                 
-                #Mientras que nuestra posicion sea mayor que cero
+                #Mientras que nuestra posicion sea mayor o igual que la inicial de A
                 while:
                     blt $t3, $a0, fin0
                     l.s $f0, ($t3) #Leemos el valor de esa posicion de la matriz y lo guardamos en $f0

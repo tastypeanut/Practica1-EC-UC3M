@@ -85,3 +85,57 @@
                 finm1:
                     li $v0, -1
                     jr $ra
+
+
+        sumar:
+
+            #Guardamos los valores de $a en $t para trabajar con ellos
+            move $t0, $a0
+            move $t1, $a1
+            move $t2, $a2
+            move $t3, $a3 # t3 = M
+            lw $t4, ($sp) # t4 = N
+
+            #Comparamos M y N para ver si son valores válidos, si no lo son llaman a la etiqueta que devuelve -1
+            blez $t3, fin1
+            blez $t4, fin1
+
+            #Calculamos el tamaño de la matriz de 0 a n-1 siendo n= M*N y lo multiplicamos por 4 que es el numero de direcciones de memoria en un registro
+            mul $t3, $t3, $t4 # t3 = M*N
+            addi $t3, $t3, -1
+            mul $t3, $t3, 4
+
+            
+            while:
+                bltz $t3, fin0 #Ejecutamos el bucle siempre que nuestra posicion sea mayor que 0
+
+                #Calculamos las posiciones en las que queremos trabajar de cada matriz, la cual es la de inicio de la matriz mas la que estemos del bucle y leemos el valor
+                #Matriz B
+                add $t4, $t1, $t3
+                l.s $f4, ($t4)
+                
+                #Matriz C
+                add $t5, $t2, $t3
+                l.s $f5, ($t5)
+                
+                #Matriz A
+                add $t6, $t0, $t3
+                
+                #Sumamos valores de B y C
+                add.s $f4, $f4, $f5
+                
+                #Guardamos el valor en A
+                s.s $f4, ($t6)
+                
+                #Avanzamos en el bucle
+                addi $t3, $t3, -4
+                b while
+
+
+            #Declaramos las dos funciones de fin, las cuales devuelven 0 o -1
+            fin0:
+                li $v0, 0
+                jr $ra
+            fin1:
+                li $v0, -1
+                jr $ra
